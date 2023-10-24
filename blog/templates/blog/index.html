@@ -1,0 +1,23 @@
+{% extends "blog/base.html"%} {% block content %}
+<h1>Welcome to our home page</h1>
+<!-- <div>
+        {%for drinks in drinks%}
+        <p>this is a {{drinks}}</p>
+        {% endfor %} 
+    </div> -->
+
+<div>
+  {%for post in post%}
+  <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#">{{ post.author }}</a>
+        <small class="text-muted">{{ post.date_posted }}</small>
+      </div>
+      <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+      <p class="article-content">{{ post.content }}</p>
+    </div>
+  </article>
+  {%endfor%}
+</div>
+{% endblock content %}
