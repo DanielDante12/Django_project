@@ -23,6 +23,12 @@
     {% else %}
     <title>Django Blog</title>
     {%endif%}
+    <style>
+      div.navbar-nav a{
+        padding: 5px;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -41,12 +47,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
+            <div class="navbar-nav mr-auto" style="padding: 5px;">
               <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
             </div>
             <!-- Navbar Right Side -->
-            <div class="navbar-nav">
+            <div class="navbar-nav" style="text-align: right; padding: 5px;">
               <a class="nav-item nav-link" href="#">Login</a>
               <a class="nav-item nav-link" href="#">Register</a>
             </div>
